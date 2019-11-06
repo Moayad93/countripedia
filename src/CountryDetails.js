@@ -7,7 +7,7 @@ const CountryDetails = props => {
   let countryDetails =
     props.countryProp === undefined ? null : (
       <section className="row">
-        <div className="col-6">
+        <div className="col-6 text-center bg-warning">
           <img
             src={props.countryProp.flag}
             alt=""
@@ -16,10 +16,10 @@ const CountryDetails = props => {
           />
           <h1 className="lead">{props.countryProp.name}</h1>
         </div>
-        <div className="col-6">
+        <div className="col-6 bg-success">
           <p>{props.countryProp.capital}</p>
         </div>
-        <div className="col-12">
+        <div className="col-12 bg-secondary">
           <p>{props.countryProp.capital}</p>
           <p>{props.countryProp.altSpellings}</p>
           <p>{props.countryProp.region}</p>
