@@ -5,7 +5,12 @@ import Details from "./pages/Details";
 import Error from "./pages/Error";
 import countries from "./db/Countries";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  HashRouter
+} from "react-router-dom";
 
 import Footer from "./Footer";
 
@@ -53,7 +58,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <main className="row justify-content-center">
-          <Router>
+          <HashRouter basename="/">
             <Switch>
               <Route
                 exact
@@ -79,7 +84,7 @@ class App extends Component {
               />
               <Route render={() => <Error />} />
             </Switch>
-          </Router>
+          </HashRouter>
         </main>
         <Footer />
       </div>
