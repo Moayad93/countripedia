@@ -25,50 +25,45 @@ class Home extends Component {
 
     return (
       <>
-        <section className="row">
-          <section className="col-12 align-items-center">
-            <h1 className="display-4 text-center">Countripedia</h1>
-          </section>
+        <section className="col-12 mt-5">
+          <h1 className="display-1 text-center text-white h1-header">Countripedia</h1>
         </section>
-        <section className="row">
-          <section className="col-12 align-items-center">
-            <div className="input-group mx-auto my-5">
+        <section className="col-6 mx-auto lead">
+          <div className="input-group my-5">
+            <button
+              className="btn btn-danger"
+              onClick={this.props.removeAllCountriesProp}
+            >
+              Reset
+            </button>
+            <datalist id="countriesOptions">{countriesNames}</datalist>
+            <input
+              list="countriesOptions"
+              name="country"
+              className="form-control ml-2"
+              id="countryInput"
+            />
+            <div className="input-group-append">
               <button
-                className="btn btn-danger mr-5"
-                onClick={this.props.removeAllCountriesProp}
+                className="btn btn-info"
+                onClick={this.props.addCountryProp}
               >
-                Reset
+                Add
               </button>
-              <datalist id="countriesOptions">{countriesNames}</datalist>
-              <input
-                list="countriesOptions"
-                name="country"
-                className="form-control"
-                id="countryInput"
-              />
-              <div className="input-group-append">
-                <button
-                  className="btn btn-info"
-                  onClick={this.props.addCountryProp}
-                >
-                  Add
-                </button>
-              </div>
             </div>
-            <div className="col mx-auto">
-              <span className="mt-4">
-                Countries: {selectedCountriesButtons}
-              </span>
-              <div className="col justify-content-end">
-                <Link to="/details">
-                  <button className="btn btn-warning my-5 align-self-end">
-                    Details &#8594;
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </section>
+          </div>
+          <div className="col p-0">
+            <span className="mt-4 text-white lead">Countries: {selectedCountriesButtons}</span>
+          </div>
+          <div className="col p-0 text-center">
+            <Link to="/details">
+              <button className="btn btn-warning my-5 btn">Details &#8594;</button>
+            </Link>
+          </div>
         </section>
+        {/* <Link to="/review">
+          <button className="btn btn-warning my-5">Review</button>
+        </Link> */}
       </>
     );
   }

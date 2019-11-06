@@ -3,9 +3,6 @@ import React from "react";
 const CountryDetails = props => {
   console.log("CountryDetails Component");
 
-  // set state new way
-  const [note, setNote] = useState("");
-
   let countryDetails =
     props.countryProp === undefined ? null : (
       <>
@@ -27,25 +24,6 @@ const CountryDetails = props => {
             <p>{props.countryProp.altSpellings}</p>
             <p>{props.countryProp.region}</p>
             <p>{props.countryProp.population}</p>
-          </div>
-        </section>
-        <section className="row">
-          <div className="col">
-            <div class="form-group">
-              <textarea
-                class="form-control"
-                id="note"
-                rows="2"
-                placeholder="Add your notes..."
-              ></textarea>
-              <button className="btn btn-secondary" onClick={() => {}}>
-                Add
-              </button>
-            </div>
-            <div className="col hide">
-              <p>this.state.comment</p>
-              <button className="btn btn-secondary">Edit</button>
-            </div>
           </div>
         </section>
       </>

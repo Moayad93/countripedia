@@ -12,6 +12,7 @@ import {
   HashRouter
 } from "react-router-dom";
 
+import Review from './Review'
 import Footer from "./Footer";
 
 class App extends Component {
@@ -79,6 +80,14 @@ class App extends Component {
                 render={() => (
                   <Details
                     selectedCountriesProp={this.state.selectedCountries}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/review"
+                render={() => (
+                  <Review
                   />
                 )}
               />
