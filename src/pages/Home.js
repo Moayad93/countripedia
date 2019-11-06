@@ -56,7 +56,7 @@ class Home extends Component {
             <span className="mt-4">Countries: {selectedCountriesButtons}</span>
             <br />
             <Link to="/details">
-              <button className="btn btn-warning my-5">Details</button>
+              <button className="btn btn-warning my-5">Details &#8594;</button>
             </Link>
           </div>
         </section>

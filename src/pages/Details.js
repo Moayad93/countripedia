@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import CountryDetails from "../CountryDetails";
+import { Link } from "react-router-dom";
 
 class Details extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Details extends Component {
 
     this.state = {
       displayedCountries: [],
-      country: {}
+      country: {},
     };
   }
 
@@ -32,13 +33,14 @@ class Details extends Component {
     console.log("showDetails()");
     console.log(country);
     this.setState({
-      country: country
+      country: country,
     });
     console.log(this.state.country);
   };
 
   printCountries = country => {
     console.log("printCountries()");
+    console.log(country);
     this.setState({
       displayedCountries: [
         ...this.state.displayedCountries,
@@ -47,7 +49,7 @@ class Details extends Component {
             <h1 className="text-center">{country.name}</h1>
           </div>
         </section>
-      ]
+      ],
     });
   };
 
@@ -56,7 +58,12 @@ class Details extends Component {
       <>
         <aside className="col-3">{this.state.displayedCountries}</aside>
         <article className="col-9 bg-light">
-          <CountryDetails countryProp={this.state.country} />
+          <CountryDetails
+            countryProp={this.state.country}
+          />
+          <Link to="/">
+            <button className="btn btn-warning my-5">&#8592; Back</button>
+          </Link>
         </article>
       </>
     );

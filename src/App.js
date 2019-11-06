@@ -21,16 +21,18 @@ class App extends Component {
     const countryInput = document.querySelector("#countryInput");
 
     let selectedCountries = [];
-    selectedCountries = this.state.selectedCountries.includes(
-      countryInput.value
-    ) || false
-      ? [...this.state.selectedCountries]
-      : [...this.state.selectedCountries, countryInput.value];
+    selectedCountries =
+      this.state.selectedCountries.includes(countryInput.value) ||
+      !countryInput.value ||
+      countries.indexOf(countryInput.value) === -1
+        ? [...this.state.selectedCountries]
+        : [...this.state.selectedCountries, countryInput.value];
+
     this.setState({
       selectedCountries
     });
 
-    // countryInput.value = "";
+    countryInput.value = "";
   };
   removeCountry = country => {
     console.log("removeCountry()");
