@@ -1,34 +1,63 @@
 import React, { Component } from "react";
 import axios from "axios";
+import CountryDetails from "../CountryDetails";
 
 class Details extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayedCountries: [],
+      country: {}
+    };
+  }
 
   componentDidMount() {
-    axios
+    console.log("componentDidMount()");
+    this.props.selectedCountriesProp.map((country, index) => {
+      return axios
+        .get(`https://restcountries.eu/rest/v2/name/${country}`)
 
-      .get("https://restcountries.eu/rest/v2/all")
+        .then(result => {
+          console.log(result.data[0].name);
+          console.log(result.data[0].capital);
+          this.printCountries(result.data[0]);
+        })
 
-      .then(result => {
-        const country = result.data.map(country => (
-          <option value={country.name} />
-        ));
-        this.setState({
-          country: country
-        });
-        console.log(country);
-      })
-
-      .catch(console.error());
+        .catch(console.error());
+    });
   }
+
+  showDetails = country => {
+    console.log("showDetails()");
+    console.log(country);
+    this.setState({
+      country: country
+    });
+    console.log(this.state.country);
+  };
+
+  printCountries = country => {
+    console.log("printCountries()");
+    this.setState({
+      displayedCountries: [
+        ...this.state.displayedCountries,
+        <section className="row" onClick={() => this.showDetails(country)}>
+          <div className="col">
+            <h1 className="text-center">{country.name}</h1>
+          </div>
+        </section>
+      ]
+    });
+  };
 
   render() {
     return (
       <>
-        <section>Test</section>
-        <p>{this.props.selectedCountriesProp}</p>
+        <aside className="col-3">{this.state.displayedCountries}</aside>
+        <article className="col-9 bg-light">
+          <CountryDetails countryProp={this.state.country} />
+        </article>
       </>
     );
   }

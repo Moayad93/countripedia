@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class Home extends Component {
-
   render() {
     console.log(this.props.selectedCountriesProp);
 
@@ -14,7 +13,7 @@ class Home extends Component {
       (country, index) => {
         return (
           <button
-            className="btn btn-danger btn-sm mr-2"
+            className="btn btn-outline-danger btn-sm mr-2"
             onClick={() => this.props.removeCountryProp(country)}
             key={index}
           >
@@ -26,14 +25,17 @@ class Home extends Component {
 
     return (
       <>
-        <header className="row bg-light">
-          <div className="col">
-            <h1 className="display-4 text-center">Countripedia</h1>
-          </div>
-        </header>
-        <main className="row">
-          <section className="col">
-            <div className="input-group w-50">
+        <section className="col-12 align-items-center">
+          <h1 className="display-4 text-center">Countripedia</h1>
+        </section>
+        <section className="col-12 align-items-center">
+            <div className="input-group w-50 mx-auto my-5">
+              <button
+                className="btn btn-danger mr-5"
+                onClick={this.props.removeAllCountriesProp}
+              >
+                Reset
+              </button>
               <datalist id="countriesOptions">{countriesNames}</datalist>
               <input
                 list="countriesOptions"
@@ -50,18 +52,14 @@ class Home extends Component {
                 </button>
               </div>
             </div>
-            <span>Countries: {selectedCountriesButtons}</span>
+            <div className="col-6 mx-auto">
+            <span className="mt-4">Countries: {selectedCountriesButtons}</span>
             <br />
-            <Link
-              to="/details"
-              // render={() => (
-              //   <Details />
-              // )}
-            >
-              <button className="btn btn-warning mt-2">Details</button>
+            <Link to="/details">
+              <button className="btn btn-warning my-5">Details</button>
             </Link>
-          </section>
-        </main>
+          </div>
+        </section>
       </>
     );
   }

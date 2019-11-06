@@ -7,6 +7,8 @@ import countries from "./db/Countries";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Footer from "./Footer";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,9 +20,17 @@ class App extends Component {
     console.log("addCountry()");
     const countryInput = document.querySelector("#countryInput");
 
+    let selectedCountries = [];
+    selectedCountries = this.state.selectedCountries.includes(
+      countryInput.value
+    ) || false
+      ? [...this.state.selectedCountries]
+      : [...this.state.selectedCountries, countryInput.value];
     this.setState({
-      selectedCountries: [...this.state.selectedCountries, countryInput.value]
+      selectedCountries
     });
+
+    // countryInput.value = "";
   };
   removeCountry = country => {
     console.log("removeCountry()");
@@ -31,42 +41,45 @@ class App extends Component {
       selectedCountries: this.state.selectedCountries
     });
   };
+  removeAllCountries = () => {
+    console.log("removeAllCountries()");
+    this.setState({
+      selectedCountries: []
+    });
+  };
   render() {
     return (
       <div className="container-fluid">
-        <Router>
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <Home
-                  countriesProp={countries}
-                  addCountryProp={this.addCountry}
-                  removeCountryProp={this.removeCountry}
-                  selectedCountriesProp={this.state.selectedCountries}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/details"
-              render={() => (
-                <Details
-                  selectedCountriesProp={this.state.selectedCountries}
-                />
-              )}
-            />
-            <Route render={() => <Error />} />
-          </Switch>
-        </Router>
-        <footer className="row bg-light">
-          <div className="col">
-            <p className="text-center">
-              <small>❮❯ by Moayad Alnuwaysir 2019</small>
-            </p>
-          </div>
-        </footer>
+        <main className="row justify-content-center">
+          <Router>
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => (
+                  <Home
+                    countriesProp={countries}
+                    addCountryProp={this.addCountry}
+                    removeCountryProp={this.removeCountry}
+                    removeAllCountriesProp={this.removeAllCountries}
+                    selectedCountriesProp={this.state.selectedCountries}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/details"
+                render={() => (
+                  <Details
+                    selectedCountriesProp={this.state.selectedCountries}
+                  />
+                )}
+              />
+              <Route render={() => <Error />} />
+            </Switch>
+          </Router>
+        </main>
+        <Footer />
       </div>
     );
   }
