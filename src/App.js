@@ -57,7 +57,7 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <main className="row justify-content-center">
+        <main className="row">
           <HashRouter basename="/countripedia">
             <Switch>
               <Route

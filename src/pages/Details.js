@@ -9,7 +9,7 @@ class Details extends Component {
 
     this.state = {
       displayedCountries: [],
-      country: {},
+      country: {}
     };
   }
 
@@ -33,7 +33,7 @@ class Details extends Component {
     console.log("showDetails()");
     console.log(country);
     this.setState({
-      country: country,
+      country: country
     });
     console.log(this.state.country);
   };
@@ -49,7 +49,7 @@ class Details extends Component {
             <h1 className="text-center">{country.name}</h1>
           </div>
         </section>
-      ],
+      ]
     });
   };
 
@@ -58,12 +58,12 @@ class Details extends Component {
       <>
         <aside className="col-3">{this.state.displayedCountries}</aside>
         <article className="col-9 bg-light">
-          <CountryDetails
-            countryProp={this.state.country}
-          />
-          <Link to="/">
-            <button className="btn btn-warning my-5">&#8592; Back</button>
-          </Link>
+          <CountryDetails countryProp={this.state.country} />
+          <div className="col-12">
+            <Link to="/">
+              <button className="btn btn-warning my-5">&#8592; Back</button>
+            </Link>
+          </div>
         </article>
       </>
     );

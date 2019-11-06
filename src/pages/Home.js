@@ -25,11 +25,14 @@ class Home extends Component {
 
     return (
       <>
-        <section className="col-12 align-items-center">
-          <h1 className="display-4 text-center">Countripedia</h1>
+        <section className="row">
+          <section className="col-12 align-items-center">
+            <h1 className="display-4 text-center">Countripedia</h1>
+          </section>
         </section>
-        <section className="col-12 align-items-center">
-            <div className="input-group w-50 mx-auto my-5">
+        <section className="row">
+          <section className="col-12 align-items-center">
+            <div className="input-group mx-auto my-5">
               <button
                 className="btn btn-danger mr-5"
                 onClick={this.props.removeAllCountriesProp}
@@ -52,13 +55,19 @@ class Home extends Component {
                 </button>
               </div>
             </div>
-            <div className="col-6 mx-auto">
-            <span className="mt-4">Countries: {selectedCountriesButtons}</span>
-            <br />
-            <Link to="/details">
-              <button className="btn btn-warning my-5">Details &#8594;</button>
-            </Link>
-          </div>
+            <div className="col mx-auto">
+              <span className="mt-4">
+                Countries: {selectedCountriesButtons}
+              </span>
+              <div className="col justify-content-end">
+                <Link to="/details">
+                  <button className="btn btn-warning my-5 align-self-end">
+                    Details &#8594;
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </section>
         </section>
       </>
     );
