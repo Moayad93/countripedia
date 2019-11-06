@@ -46,7 +46,7 @@ class Details extends Component {
         ...this.state.displayedCountries,
         <section className="row" onClick={() => this.showDetails(country)}>
           <div className="col">
-            <h1 className="text-center">{country.name}</h1>
+            <h1 className="text-left lead">{country.name}</h1>
           </div>
         </section>
       ]
@@ -57,7 +57,7 @@ class Details extends Component {
     return (
       <>
         <aside className="col-3">{this.state.displayedCountries}</aside>
-        <article className="col-9 bg-light">
+        <article className="col-9 flag-div">
           <CountryDetails countryProp={this.state.country} />
           <div className="col-12">
             <Link to="/">

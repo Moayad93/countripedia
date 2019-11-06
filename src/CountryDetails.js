@@ -7,17 +7,14 @@ const CountryDetails = props => {
     props.countryProp === undefined ? null : (
       <>
         <section className="row">
-          <div className="col-6 text-center bg-warning">
+          <div className="col-12 text-center pb-5 flag-div">
             <img
               src={props.countryProp.flag}
               alt=""
-              className=""
-              height="125px"
+              className="mt-5"
+              height="200px"
             />
             <h1 className="lead">{props.countryProp.name}</h1>
-          </div>
-          <div className="col-6 bg-success">
-            <p>{props.countryProp.capital}</p>
           </div>
           <div className="col-12 bg-secondary">
             <p>{props.countryProp.capital}</p>

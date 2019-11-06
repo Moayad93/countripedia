@@ -26,7 +26,7 @@ class Home extends Component {
     return (
       <>
         <section className="col-12 mt-5">
-          <h1 className="display-1 text-center text-white h1-header">Countripedia</h1>
+          <h1 className="display-1 text-center text-white h1-header mt-5">Countripedia</h1>
         </section>
         <section className="col-6 mx-auto lead">
           <div className="input-group my-5">
