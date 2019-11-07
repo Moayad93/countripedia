@@ -11,10 +11,10 @@ const CountryDetails = props => {
             <img
               src={props.countryProp.flag}
               alt=""
-              className="mt-5"
+              className="mt-5 shadow"
               height="200px"
             />
-            <h1 className="lead">{props.countryProp.name}</h1>
+            <h1 className="display-4 text-white my-2 shadow">{props.countryProp.name}</h1>
           </div>
           <div className="col-12 bg-secondary">
             <p>{props.countryProp.capital}</p>

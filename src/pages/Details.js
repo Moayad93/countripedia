@@ -44,9 +44,9 @@ class Details extends Component {
     this.setState({
       displayedCountries: [
         ...this.state.displayedCountries,
-        <section className="row" onClick={() => this.showDetails(country)}>
-          <div className="col">
-            <h1 className="text-left lead">{country.name}</h1>
+        <section className="country-row row" onClick={() => this.showDetails(country)}>
+          <div className="col p-0">
+            <h1 className="text-white p-2">{country.name}</h1>
           </div>
         </section>
       ]
