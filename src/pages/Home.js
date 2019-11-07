@@ -26,7 +26,9 @@ class Home extends Component {
     return (
       <>
         <section className="col-12 mt-5">
-          <h1 className="display-1 text-center text-white h1-header mt-5">Countripedia</h1>
+          <h1 className="display-1 text-center text-white h1-header mt-5">
+            Countripedia
+          </h1>
         </section>
         <section className="col-sm-6 col-xs-9 mx-auto lead">
           <div className="input-group my-5">
@@ -53,11 +55,15 @@ class Home extends Component {
             </div>
           </div>
           <div className="col p-0">
-            <span className="mt-4 text-white lead">Countries: {selectedCountriesButtons}</span>
+            <span className="mt-4 text-white lead">
+              Countries: {selectedCountriesButtons}
+            </span>
           </div>
           <div className="col p-0 text-center">
             <Link to="/details">
-              <button className="btn btn-warning my-5 btn">Details &#8594;</button>
+              <button className="btn btn-warning my-5 btn">
+                Details &#8594;
+              </button>
             </Link>
           </div>
         </section>

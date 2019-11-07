@@ -1,18 +1,15 @@
 import React, { Component } from "react";
-
 import Home from "./pages/Home";
 import Details from "./pages/Details";
 import Error from "./pages/Error";
 import countries from "./db/Countries";
-
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   HashRouter
 } from "react-router-dom";
-
-import Review from './Review'
+import Review from "./Review";
 import Footer from "./Footer";
 
 class App extends Component {
@@ -83,14 +80,7 @@ class App extends Component {
                   />
                 )}
               />
-              <Route
-                exact
-                path="/review"
-                render={() => (
-                  <Review
-                  />
-                )}
-              />
+              <Route exact path="/review" render={() => <Review />} />
               <Route render={() => <Error />} />
             </Switch>
           </HashRouter>

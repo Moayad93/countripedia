@@ -44,7 +44,10 @@ class Details extends Component {
     this.setState({
       displayedCountries: [
         ...this.state.displayedCountries,
-        <section className="country-row row" onClick={() => this.showDetails(country)}>
+        <section
+          className="country-row row"
+          onClick={() => this.showDetails(country)}
+        >
           <div className="col p-0">
             <h3 className="font-weight-light text-white p-2">{country.name}</h3>
           </div>
