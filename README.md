@@ -32,13 +32,6 @@ Built with
 * React.js
 * RESTful API
 
-User Story
-------
-* As a user, I want to be able to add my favourite countries so that I can some details about them
-* As a user, I want to be able to choose between my favourite countries so that I can see each ones details
-* As a user, I want to be able to go back and change between my favourite countries so that I can see new details
-* As a user, I want to be able to write my review so that the author can see my recommendation
-
 Wireframe
 ------
 
@@ -49,6 +42,13 @@ The wireframe is a simple low-fidelity drawing:
 
 * Details
 <img src="./wireframe-2.jpg" width="500" alt="Details page" style="text-align: center">
+
+User Story
+------
+* As a user, I want to be able to add my favourite countries so that I can some details about them
+* As a user, I want to be able to choose between my favourite countries so that I can see each ones details
+* As a user, I want to be able to go back and change between my favourite countries so that I can see new details
+* As a user, I want to be able to write my review so that the author can see my recommendation
 
 To-do
 ------
