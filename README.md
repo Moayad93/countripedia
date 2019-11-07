@@ -45,10 +45,10 @@ Wireframe
 The wireframe is a simple low-fidelity drawing:
 
 * Home
-![Home page](wireframe-1.jpg =250x)
+<div style="width:50%">![Home page](wireframe-1.jpg)</div>
 
 * Details
-![Details page](wireframe-2.jpg =250x)
+<div style="width:50%">![Details page](wireframe-2.jpg)</div>
 
 To-do
 ------
