@@ -79,10 +79,10 @@ class Review extends Component {
   render() {
     return (
       <>
-        <section className="col-1 text-right">
-          <Link to="/review">
-            <button className="btn-sm btn btn-outline-light my-4">
-              Review
+        <section className="col-12 text-left">
+          <Link to="/">
+            <button className="btn btn-sm btn-warning my-4">
+              &#8592; Back
             </button>
           </Link>
         </section>
@@ -96,13 +96,14 @@ class Review extends Component {
               onChange={this.handleChange}
               value={this.state.textAreaValue}
             ></textarea>
-            <button className="btn btn-warning" onClick={this.handleClick}>
+          </div>
+          <div className="col text-center">
+            <p className="lead text-white">{this.state.noteParagraphValue}</p>
+            <button className="btn btn-success" onClick={this.handleClick}>
               Add
             </button>
-          </div>
-          <div className="col">
-            <p>{this.state.noteParagraphValue}</p>
-            <button className="btn btn-warning" onClick={this.handleEdit}>
+            &nbsp;
+            <button className="btn btn-info" onClick={this.handleEdit}>
               Edit
             </button>
           </div>

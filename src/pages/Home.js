@@ -25,7 +25,7 @@ class Home extends Component {
 
     return (
       <>
-        <section className="col-1 text-right">
+        <section className="col-12 text-left">
             <Link to="/review">
               <button className="btn-sm btn btn-outline-light my-4">Review</button>
             </Link>
