@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b760ae7c0b2581036ef8ecba2ed58cf8",
+    "revision": "7f33b5d39a1e5d947cbc16ab78da89ac",
     "url": "/countripedia/index.html"
   },
   {
-    "revision": "ffc3e5294f8b01462db3",
-    "url": "/countripedia/static/css/main.665e4d14.chunk.css"
+    "revision": "e067626bde04817c8f33",
+    "url": "/countripedia/static/css/main.dd1e9cf4.chunk.css"
   },
   {
     "revision": "7d5a6192fd696c30ea58",
     "url": "/countripedia/static/js/2.7096d98c.chunk.js"
   },
   {
-    "revision": "ffc3e5294f8b01462db3",
-    "url": "/countripedia/static/js/main.91e67c9e.chunk.js"
+    "revision": "e067626bde04817c8f33",
+    "url": "/countripedia/static/js/main.64b2825e.chunk.js"
   },
   {
     "revision": "a366a9c733885f300103",

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/countripedia/static/css/main.665e4d14.chunk.css",
-    "main.js": "/countripedia/static/js/main.91e67c9e.chunk.js",
-    "main.js.map": "/countripedia/static/js/main.91e67c9e.chunk.js.map",
+    "main.css": "/countripedia/static/css/main.dd1e9cf4.chunk.css",
+    "main.js": "/countripedia/static/js/main.64b2825e.chunk.js",
+    "main.js.map": "/countripedia/static/js/main.64b2825e.chunk.js.map",
     "runtime-main.js": "/countripedia/static/js/runtime-main.28cd0ef9.js",
     "runtime-main.js.map": "/countripedia/static/js/runtime-main.28cd0ef9.js.map",
     "static/js/2.7096d98c.chunk.js": "/countripedia/static/js/2.7096d98c.chunk.js",
     "static/js/2.7096d98c.chunk.js.map": "/countripedia/static/js/2.7096d98c.chunk.js.map",
     "index.html": "/countripedia/index.html",
-    "precache-manifest.300263edc2768ea9bc50e0a7b6bef35d.js": "/countripedia/precache-manifest.300263edc2768ea9bc50e0a7b6bef35d.js",
+    "precache-manifest.cbed73fc396de10470bcca639e58bb77.js": "/countripedia/precache-manifest.cbed73fc396de10470bcca639e58bb77.js",
     "service-worker.js": "/countripedia/service-worker.js",
-    "static/css/main.665e4d14.chunk.css.map": "/countripedia/static/css/main.665e4d14.chunk.css.map",
+    "static/css/main.dd1e9cf4.chunk.css.map": "/countripedia/static/css/main.dd1e9cf4.chunk.css.map",
     "static/media/index.css": "/countripedia/static/media/world_map.a8f69b50.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.28cd0ef9.js",
     "static/js/2.7096d98c.chunk.js",
-    "static/css/main.665e4d14.chunk.css",
-    "static/js/main.91e67c9e.chunk.js"
+    "static/css/main.dd1e9cf4.chunk.css",
+    "static/js/main.64b2825e.chunk.js"
   ]
 }
