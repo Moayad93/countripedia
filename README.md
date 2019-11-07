@@ -1,9 +1,9 @@
 Countripedia
 ======
 
-<!-- Demo
+Demo
 ------
-Working live demo: https://moayad93.github.io/tic-tac-toe/ -->
+Working live demo: https://moayad93.github.io/countripedia/
 
 Usage
 ------
@@ -21,7 +21,7 @@ To fix a bug or improve the game features, follow the next steps:
 * Create a New Pull Request
 
 ### Bug / Feature Request
-If there is a bug, open an issue <a href="https://github.com/Moayad93/tic-tac-toe/issues">here</a> by including your issue with explanation.
+If there is a bug, open an issue <a href="https://github.com/Moayad93/countripedia/issues">here</a> by including your issue with explanation.
 
 Built with
 ------
@@ -30,10 +30,18 @@ Built with
 * JavaScript
 * Bootstrap
 * React.js
+* API
 
-<!--To-do
+User Story
 ------
-The game currently has a multiplayer mode. So, AI would be added to be played against to make the game better -->
+* As a user, I want to be able to add my favourite countries so that I can some details about them
+* As a user, I want to be able to choose between my favourite countries so that I can see each ones details
+* As a user, I want to be able to go back and change between my favourite countries so that I can see new details
+* As a user, I want to be able to write my review so that the author can see my recommendation
+
+To-do
+------
+The website but due to the insufficient time I could not complete it. So, if GeoMap would be added to it would enhance the website.
 
 Author
 ------

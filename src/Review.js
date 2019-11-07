@@ -77,27 +77,36 @@ class Review extends Component {
 
   render() {
     return (
-      <div className="col-6 mx-auto mt-5">
-        <div className="form-group W-100">
-          <textarea
-            className="form-control"
-            id="note"
-            rows="4"
-            placeholder="Kindly, add your review and recommendation..."
-            onChange={this.handleChange}
-            value={this.state.textAreaValue}
-          ></textarea>
-          <button className="btn btn-warning" onClick={this.handleClick}>
-            Add
-          </button>
+      <>
+        <section className="col-1 text-right">
+          <Link to="/review">
+            <button className="btn-sm btn btn-outline-light my-4">
+              Review
+            </button>
+          </Link>
+        </section>
+        <div className="col-6 mx-auto mt-5 py-5">
+          <div className="form-group W-100 mt-5">
+            <textarea
+              className="form-control"
+              id="note"
+              rows="4"
+              placeholder="Kindly, add your review and recommendation..."
+              onChange={this.handleChange}
+              value={this.state.textAreaValue}
+            ></textarea>
+            <button className="btn btn-warning" onClick={this.handleClick}>
+              Add
+            </button>
+          </div>
+          <div className="col">
+            <p>{this.state.noteParagraphValue}</p>
+            <button className="btn btn-warning" onClick={this.handleEdit}>
+              Edit
+            </button>
+          </div>
         </div>
-        <div className="col">
-          <p>{this.state.noteParagraphValue}</p>
-          <button className="btn btn-warning" onClick={this.handleEdit}>
-            Edit
-          </button>
-        </div>
-      </div>
+      </>
     );
   }
 }

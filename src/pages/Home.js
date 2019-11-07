@@ -25,7 +25,12 @@ class Home extends Component {
 
     return (
       <>
-        <section className="col-12 mt-5">
+        <section className="col-1 text-right">
+            <Link to="/review">
+              <button className="btn-sm btn btn-outline-light my-4">Review</button>
+            </Link>
+        </section>
+        <section className="col-12 mt-4">
           <h1 className="display-1 text-center text-white h1-header mt-5">
             Countripedia
           </h1>
@@ -67,9 +72,6 @@ class Home extends Component {
             </Link>
           </div>
         </section>
-        <Link to="/review">
-          <button className="btn btn-sm btn-warning my-5">Review</button>
-        </Link>
       </>
     );
   }
