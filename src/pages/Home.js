@@ -67,9 +67,9 @@ class Home extends Component {
             </Link>
           </div>
         </section>
-        {/* <Link to="/review">
-          <button className="btn btn-warning my-5">Review</button>
-        </Link> */}
+        <Link to="/review">
+          <button className="btn btn-sm btn-warning my-5">Review</button>
+        </Link>
       </>
     );
   }

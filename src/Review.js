@@ -62,13 +62,22 @@ class Review extends Component {
     event.preventDefault();
 
     this.setState({
-      noteParagraphValue: this.state.textAreaValue
+      noteParagraphValue: this.state.textAreaValue,
+      textAreaValue: ""
+    });
+  };
+
+  handleEdit = event => {
+    event.preventDefault();
+
+    this.setState({
+      textAreaValue: this.state.noteParagraphValue
     });
   };
 
   render() {
     return (
-      <div className="col-6 mx-auto">
+      <div className="col-6 mx-auto mt-5">
         <div className="form-group W-100">
           <textarea
             className="form-control"
@@ -76,14 +85,17 @@ class Review extends Component {
             rows="4"
             placeholder="Kindly, add your review and recommendation..."
             onChange={this.handleChange}
+            value={this.state.textAreaValue}
           ></textarea>
-          <button className="btn btn-secondary" onClick={this.handleClick}>
+          <button className="btn btn-warning" onClick={this.handleClick}>
             Add
           </button>
         </div>
         <div className="col">
           <p>{this.state.noteParagraphValue}</p>
-          <button className="btn btn-secondary">Edit</button>
+          <button className="btn btn-warning" onClick={this.handleEdit}>
+            Edit
+          </button>
         </div>
       </div>
     );
