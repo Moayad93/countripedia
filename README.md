@@ -30,7 +30,7 @@ Built with
 * JavaScript
 * Bootstrap
 * React.js
-* API
+* RESTful API
 
 User Story
 ------
