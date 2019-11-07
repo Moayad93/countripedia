@@ -18,8 +18,8 @@ const CountryDetails = props => {
               {props.countryProp.name}
             </h1>
           </div>
-          <div className="col-12 p-1">
-            <dl class="row lead text-white">
+          <div className="col-12 p-2">
+            <dl class="row lead text-white text-center">
               <dt class="col-sm-3">Capital</dt>
               <dd class="col-sm-9">{props.countryProp.capital}</dd>
 
@@ -27,6 +27,9 @@ const CountryDetails = props => {
               <dd class="col-sm-9">{props.countryProp.region}</dd>
 
               <dt class="col-sm-3">Population</dt>
+              <dd class="col-sm-9">{props.countryProp.population}</dd>
+
+              <dt class="col-sm-3">Time</dt>
               <dd class="col-sm-9">{props.countryProp.population}</dd>
             </dl>
           </div>

@@ -59,7 +59,7 @@ class Details extends Component {
         <aside className="col-3">{this.state.displayedCountries}</aside>
         <article className="col-9 flag-div">
           <CountryDetails countryProp={this.state.country} />
-          <div className="col-12">
+          <div className="col-12 justify-content-end">
             <Link to="/">
               <button className="btn btn-warning my-5">&#8592; Back</button>
             </Link>
