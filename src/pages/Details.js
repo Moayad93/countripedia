@@ -46,7 +46,7 @@ class Details extends Component {
         ...this.state.displayedCountries,
         <section className="country-row row" onClick={() => this.showDetails(country)}>
           <div className="col p-0">
-            <h1 className="text-white p-2">{country.name}</h1>
+            <h3 className="font-weight-light text-white p-2">{country.name}</h3>
           </div>
         </section>
       ]

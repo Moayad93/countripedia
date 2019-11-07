@@ -14,13 +14,21 @@ const CountryDetails = props => {
               className="mt-5 shadow"
               height="200px"
             />
-            <h1 className="display-4 text-white my-2 shadow">{props.countryProp.name}</h1>
+            <h1 className="display-4 text-white my-2">
+              {props.countryProp.name}
+            </h1>
           </div>
-          <div className="col-12 bg-secondary">
-            <p>{props.countryProp.capital}</p>
-            <p>{props.countryProp.altSpellings}</p>
-            <p>{props.countryProp.region}</p>
-            <p>{props.countryProp.population}</p>
+          <div className="col-12 p-1">
+            <dl class="row lead text-white">
+              <dt class="col-sm-3">Capital</dt>
+              <dd class="col-sm-9">{props.countryProp.capital}</dd>
+
+              <dt class="col-sm-3">Region</dt>
+              <dd class="col-sm-9">{props.countryProp.region}</dd>
+
+              <dt class="col-sm-3">Population</dt>
+              <dd class="col-sm-9">{props.countryProp.population}</dd>
+            </dl>
           </div>
         </section>
       </>
