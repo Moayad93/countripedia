@@ -39,6 +39,17 @@ User Story
 * As a user, I want to be able to go back and change between my favourite countries so that I can see new details
 * As a user, I want to be able to write my review so that the author can see my recommendation
 
+Wireframe
+------
+
+The wireframe is a simple low-fidelity drawing:
+
+* Home
+![Home page](img/1.png)
+
+* Details
+![Details page](img/2.png)
+
 To-do
 ------
 The website but due to the insufficient time I could not complete it. So, if GeoMap would be added to it would enhance the website.
